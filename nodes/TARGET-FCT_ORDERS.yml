@@ -1,0 +1,257 @@
+steps:
+  FCT_ORDERS-33:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: 2
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 308
+              stepCounter: "33"
+            config: {}
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isChangeTracking: true
+            name: C_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 258
+                    stepCounter: "31"
+                transform: ""
+          - columnReference:
+              columnCounter: 323
+              stepCounter: "33"
+            config: {}
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_REGIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 212
+                    stepCounter: "25"
+                transform: "{{even_odd('\"STG_NATION\".\"N_REGIONKEY\"')}}"
+          - columnReference:
+              columnCounter: 322
+              stepCounter: "33"
+            config: {}
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 211
+                    stepCounter: "25"
+                transform: ""
+          - columnReference:
+              columnCounter: 296
+              stepCounter: 33
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 214
+                    stepCounter: "26"
+                transform: ""
+          - columnReference:
+              columnCounter: 297
+              stepCounter: 33
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_CUSTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 215
+                    stepCounter: "26"
+                transform: ""
+          - columnReference:
+              columnCounter: 298
+              stepCounter: 33
+            dataType: VARCHAR(1)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERSTATUS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 216
+                    stepCounter: "26"
+                transform: ""
+          - columnReference:
+              columnCounter: 299
+              stepCounter: 33
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_TOTALPRICE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 217
+                    stepCounter: "26"
+                transform: ""
+          - columnReference:
+              columnCounter: 300
+              stepCounter: 33
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 218
+                    stepCounter: "26"
+                transform: ""
+          - columnReference:
+              columnCounter: 301
+              stepCounter: 33
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERPRIORITY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 219
+                    stepCounter: "26"
+                transform: ""
+          - columnReference:
+              columnCounter: 302
+              stepCounter: 33
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_CLERK
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 220
+                    stepCounter: "26"
+                transform: ""
+          - columnReference:
+              columnCounter: 303
+              stepCounter: 33
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_SHIPPRIORITY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 221
+                    stepCounter: "26"
+                transform: ""
+          - columnReference:
+              columnCounter: 304
+              stepCounter: 33
+            dataType: VARCHAR(79)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 222
+                    stepCounter: "26"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 305
+              stepCounter: 33
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 306
+              stepCounter: 33
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              DIM_CUSTOMER: "31"
+              STG_NATION: "25"
+              STG_ORDERS: "26"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: STG_NATION
+              - locationName: TARGET
+                nodeName: STG_ORDERS
+              - locationName: TARGET
+                nodeName: DIM_CUSTOMER
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'STG_ORDERS') }} "STG_ORDERS"
+                LEFT JOIN {{ ref('TARGET', 'DIM_CUSTOMER') }} "DIM_CUSTOMER"
+                ON "STG_ORDERS"."O_CUSTKEY" = "DIM_CUSTOMER"."C_CUSTKEY"
+                LEFT JOIN {{ ref('TARGET', 'STG_NATION') }} "STG_NATION"
+                ON "STG_NATION"."N_NATIONKEY" = DIM_CUSTOMER."C_NATIONKEY"
+            name: FCT_ORDERS
+            noLinkRefs: []
+      name: FCT_ORDERS
+      overrideSQL: false
+      schema: ""
+      sqlType: Fact
+      type: sql
+    stepCounter: "33"
