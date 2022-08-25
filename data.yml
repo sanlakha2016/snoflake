@@ -13,63 +13,74 @@ environments:
         id: 1
         locationName: SRC
         schema: TPCH_SF1
-      "2":
-        database: COALASCE_DB
-        id: 2
-        locationName: TARGET
+      "5":
+        database: COALASCE_DB_STAGE_DEV
+        id: 5
+        locationName: STAGE
         schema: PUBLIC
-      "4":
-        database: COALASCE_DB_QA
-        id: 4
-        locationName: QA_TARGET
+      "6":
+        database: COALASCE_DB_DEV
+        id: 6
+        locationName: TGT
         schema: PUBLIC
     name: DEV
-  QA:
+  PROD:
     createdAt:
-      nanoseconds: 271000000
-      seconds: 1661325625
+      nanoseconds: 415000000
+      seconds: 1661410308
     createdBy: 9EflPUFuQlXv5E6J0RNGW01scsY2
-    currentlyRunningJobs: []
-    description: QA Environment
+    description: Production Environment
     devEnv: false
-    id: 2
+    id: 3
     mappings:
       "1":
         database: SNOWFLAKE_SAMPLE_DATA
         id: 1
         locationName: SRC
         schema: TPCH_SF1
-      "2":
-        database: COALASCE_DB
-        id: 2
-        locationName: TARGET
+      "7":
+        database: COALASCE_DB_STAGE_PROD
+        id: 7
+        locationName: PROD_STAGE
         schema: PUBLIC
-      "4":
-        database: COALASCE_DB_QA
-        id: 4
-        locationName: QA_TARGET
+      "8":
+        database: COALASCE_DB_PROD
+        id: 8
+        locationName: PROD_TARGET
         schema: PUBLIC
-    name: QA
+    name: PROD
 jobs: {}
 locations:
-  QA_TARGET:
+  PROD_STAGE:
     default: false
-    id: 4
-    locationName: QA_TARGET
+    id: 7
+    locationName: PROD_STAGE
+  PROD_TARGET:
+    default: false
+    id: 8
+    locationName: PROD_TARGET
   SRC:
     default: true
     id: 1
     locationName: SRC
-  TARGET:
+  STAGE:
     default: false
-    id: 2
-    locationName: TARGET
+    id: 5
+    locationName: STAGE
+  TGT:
+    default: false
+    id: 6
+    locationName: TGT
 macros:
   Macro-1:
     id: "1"
     macroString: |-
       {%- macro even_odd(column) -%}
           CASE WHEN MOD({{ column }}, 2) = 0 THEN 'EVEN' ELSE 'ODD' END
+      {%- endmacro %}
+
+      {%- macro true_false(column) -%}
+          CASE WHEN MOD({{ column }}, 2) = 0 THEN 100 ELSE 200 END
       {%- endmacro %}
 packages: {}
 projects: {}
@@ -1885,7 +1896,7 @@ stepTypes:
     version: 1
   StepType-View:
     id: View
-    isDisabled: true
+    isDisabled: false
     metadata:
       error: null
       nodeMetadataSpec: |
