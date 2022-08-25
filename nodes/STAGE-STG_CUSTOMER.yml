@@ -1,152 +1,137 @@
 steps:
-  STG_CUSTOMER-54:
+  STG_CUSTOMER-65:
     operation:
-      config:
-        insertStrategy: INSERT
-        postSQL: ""
-        preSQL: ""
-        testsEnabled: true
-        truncateBefore: true
       database: ""
-      dependencies: []
-      description: ""
-      isDataVault: false
-      isMultisource: false
+      dataset: ""
       locationID: 5
       locationName: STAGE
-      materializationType: table
       metadata:
-        appliedNodeTests: []
         columns:
-          - columnReference:
-              columnCounter: 483
-              stepCounter: 54
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 602
+              stepCounter: 65
+            config: {}
             dataType: NUMBER(38,0)
+            defaultValue: ""
             description: ""
-            hashColumns: []
-            hashDetails: null
             name: C_CUSTKEY
             nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 422
-                    stepCounter: "46"
-                transform: ""
-          - columnReference:
-              columnCounter: 484
-              stepCounter: 54
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 603
+              stepCounter: 65
+            config: {}
             dataType: VARCHAR(25)
+            defaultValue: ""
             description: ""
-            hashColumns: []
-            hashDetails: null
             name: C_NAME
             nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 423
-                    stepCounter: "46"
-                transform: ""
-          - columnReference:
-              columnCounter: 485
-              stepCounter: 54
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 604
+              stepCounter: 65
+            config: {}
             dataType: VARCHAR(40)
+            defaultValue: ""
             description: ""
-            hashColumns: []
-            hashDetails: null
             name: C_ADDRESS
             nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 424
-                    stepCounter: "46"
-                transform: ""
-          - columnReference:
-              columnCounter: 486
-              stepCounter: 54
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 605
+              stepCounter: 65
+            config: {}
             dataType: NUMBER(38,0)
+            defaultValue: ""
             description: ""
-            hashColumns: []
-            hashDetails: null
             name: C_NATIONKEY
             nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 425
-                    stepCounter: "46"
-                transform: "{{true_false('\"CUSTOMER\".\"C_NATIONKEY\"')}}"
-          - columnReference:
-              columnCounter: 487
-              stepCounter: 54
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 606
+              stepCounter: 65
+            config: {}
             dataType: VARCHAR(15)
+            defaultValue: ""
             description: ""
-            hashColumns: []
-            hashDetails: null
             name: C_PHONE
             nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 426
-                    stepCounter: "46"
-                transform: ""
-          - columnReference:
-              columnCounter: 488
-              stepCounter: 54
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 607
+              stepCounter: 65
+            config: {}
             dataType: NUMBER(12,2)
+            defaultValue: ""
             description: ""
-            hashColumns: []
-            hashDetails: null
             name: C_ACCTBAL
             nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 427
-                    stepCounter: "46"
-                transform: ""
-          - columnReference:
-              columnCounter: 489
-              stepCounter: 54
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 608
+              stepCounter: 65
+            config: {}
             dataType: VARCHAR(10)
+            defaultValue: ""
             description: ""
-            hashColumns: []
-            hashDetails: null
             name: C_MKTSEGMENT
             nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 428
-                    stepCounter: "46"
-                transform: ""
-          - columnReference:
-              columnCounter: 490
-              stepCounter: 54
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 609
+              stepCounter: 65
+            config: {}
             dataType: VARCHAR(117)
+            defaultValue: ""
             description: ""
-            hashColumns: []
-            hashDetails: null
             name: C_COMMENT
             nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 429
-                    stepCounter: "46"
-                transform: ""
-        cteString: ""
-        enabledColumnTestIDs: []
-        sourceMapping:
-          - aliases:
-              CUSTOMER: "46"
-            customSQL:
-              customSQL: ""
-            dependencies:
-              - locationName: SRC
-                nodeName: CUSTOMER
-            join:
-              joinCondition: FROM {{ ref('SRC', 'CUSTOMER') }} "CUSTOMER"
-            name: STG_CUSTOMER
-            noLinkRefs: []
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('STAGE', 'STG_CUSTOMER') }}
       name: STG_CUSTOMER
-      overrideSQL: false
       schema: ""
-      sqlType: Stage
-      type: sql
-    stepCounter: "54"
+      sqlType: Source
+      table: STG_CUSTOMER
+      type: sourceInput
+    stepCounter: "65"
