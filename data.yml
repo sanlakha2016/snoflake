@@ -29,6 +29,7 @@ environments:
       nanoseconds: 271000000
       seconds: 1661325625
     createdBy: 9EflPUFuQlXv5E6J0RNGW01scsY2
+    currentlyRunningJobs: []
     description: QA Environment
     devEnv: false
     id: 2
@@ -49,12 +50,7 @@ environments:
         locationName: QA_TARGET
         schema: PUBLIC
     name: QA
-jobs:
-  Job-2:
-    id: 2
-    name: Fact_DIM update
-    steps: []
-    subgraphs: []
+jobs: {}
 locations:
   QA_TARGET:
     default: false
@@ -2434,19 +2430,4 @@ stepTypes:
             {% endif %}
     name: Persistent Stage
     version: 1
-subgraphs:
-  Subgraph-4:
-    id: 4
-    name: Customer_DWH
-    steps:
-      - "20"
-      - "21"
-      - "22"
-      - "24"
-      - "25"
-      - "26"
-      - "27"
-      - "29"
-      - "31"
-      - "33"
-      - "34"
+subgraphs: {}
