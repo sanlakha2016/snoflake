@@ -23,6 +23,11 @@ environments:
         id: 6
         locationName: TGT
         schema: PUBLIC
+      "9":
+        database: SRC_EXTERNAL
+        id: 9
+        locationName: EXTERNAL_SOURCE
+        schema: PUBLIC
     name: DEV
   PROD:
     createdAt:
@@ -38,27 +43,28 @@ environments:
         id: 1
         locationName: SRC
         schema: TPCH_SF1
-      "7":
-        database: COALASCE_DB_STAGE_PROD
-        id: 7
-        locationName: PROD_STAGE
+      "5":
+        database: COALASCE_DB_STAGE_DEV
+        id: 5
+        locationName: STAGE
         schema: PUBLIC
-      "8":
-        database: COALASCE_DB_PROD
-        id: 8
-        locationName: PROD_TARGET
+      "6":
+        database: COALASCE_DB_DEV
+        id: 6
+        locationName: TGT
+        schema: PUBLIC
+      "9":
+        database: SRC_EXTERNAL
+        id: 9
+        locationName: EXTERNAL_SOURCE
         schema: PUBLIC
     name: PROD
 jobs: {}
 locations:
-  PROD_STAGE:
+  EXTERNAL_SOURCE:
     default: false
-    id: 7
-    locationName: PROD_STAGE
-  PROD_TARGET:
-    default: false
-    id: 8
-    locationName: PROD_TARGET
+    id: 9
+    locationName: EXTERNAL_SOURCE
   SRC:
     default: true
     id: 1
