@@ -18,7 +18,37 @@ environments:
         id: 2
         locationName: TARGET
         schema: PUBLIC
+      "4":
+        database: COALASCE_DB_QA
+        id: 4
+        locationName: QA_TARGET
+        schema: PUBLIC
     name: DEV
+  QA:
+    createdAt:
+      nanoseconds: 271000000
+      seconds: 1661325625
+    createdBy: 9EflPUFuQlXv5E6J0RNGW01scsY2
+    description: QA Environment
+    devEnv: false
+    id: 2
+    mappings:
+      "1":
+        database: SNOWFLAKE_SAMPLE_DATA
+        id: 1
+        locationName: SRC
+        schema: TPCH_SF1
+      "2":
+        database: COALASCE_DB
+        id: 2
+        locationName: TARGET
+        schema: PUBLIC
+      "4":
+        database: COALASCE_DB_QA
+        id: 4
+        locationName: QA_TARGET
+        schema: PUBLIC
+    name: QA
 jobs:
   Job-2:
     id: 2
@@ -26,6 +56,10 @@ jobs:
     steps: []
     subgraphs: []
 locations:
+  QA_TARGET:
+    default: false
+    id: 4
+    locationName: QA_TARGET
   SRC:
     default: true
     id: 1
@@ -2400,4 +2434,19 @@ stepTypes:
             {% endif %}
     name: Persistent Stage
     version: 1
-subgraphs: {}
+subgraphs:
+  Subgraph-4:
+    id: 4
+    name: Customer_DWH
+    steps:
+      - "20"
+      - "21"
+      - "22"
+      - "24"
+      - "25"
+      - "26"
+      - "27"
+      - "29"
+      - "31"
+      - "33"
+      - "34"
