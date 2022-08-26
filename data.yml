@@ -3,7 +3,9 @@ jobs:
   Job-5:
     id: 5
     name: New Job
-    steps: []
+    steps:
+      - "63"
+      - "62"
     subgraphs: []
 locations:
   EXTERNAL_SOURCE:
