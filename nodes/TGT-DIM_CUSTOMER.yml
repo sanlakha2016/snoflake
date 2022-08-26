@@ -46,8 +46,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 483
-                    stepCounter: "54"
+                  - columnCounter: 602
+                    stepCounter: "65"
                 transform: ""
           - columnReference:
               columnCounter: 546
@@ -61,8 +61,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 484
-                    stepCounter: "54"
+                  - columnCounter: 603
+                    stepCounter: "65"
                 transform: ""
           - columnReference:
               columnCounter: 547
@@ -76,8 +76,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 485
-                    stepCounter: "54"
+                  - columnCounter: 604
+                    stepCounter: "65"
                 transform: ""
           - columnReference:
               columnCounter: 548
@@ -90,8 +90,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 486
-                    stepCounter: "54"
+                  - columnCounter: 605
+                    stepCounter: "65"
                 transform: ""
           - columnReference:
               columnCounter: 549
@@ -104,8 +104,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 487
-                    stepCounter: "54"
+                  - columnCounter: 606
+                    stepCounter: "65"
                 transform: ""
           - columnReference:
               columnCounter: 550
@@ -118,8 +118,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 488
-                    stepCounter: "54"
+                  - columnCounter: 607
+                    stepCounter: "65"
                 transform: ""
           - columnReference:
               columnCounter: 551
@@ -132,8 +132,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 489
-                    stepCounter: "54"
+                  - columnCounter: 608
+                    stepCounter: "65"
                 transform: ""
           - columnReference:
               columnCounter: 552
@@ -146,8 +146,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 490
-                    stepCounter: "54"
+                  - columnCounter: 609
+                    stepCounter: "65"
                 transform: ""
           - acceptedValues:
               strictMatch: true
