@@ -1,82 +1,31 @@
-environments:
-  DEV:
-    createdAt:
-      nanoseconds: 315000000
-      seconds: 1661181337
-    createdBy: 4E5xu3XeonxV0kalcHtY
-    description: DEV Environment for testing and learning
-    devEnv: true
-    id: 1
-    mappings:
-      "1":
-        database: SNOWFLAKE_SAMPLE_DATA
-        id: 1
-        locationName: SRC
-        schema: TPCH_SF1
-      "5":
-        database: COALASCE_DB_STAGE_DEV
-        id: 5
-        locationName: STAGE
-        schema: PUBLIC
-      "6":
-        database: COALASCE_DB_DEV
-        id: 6
-        locationName: TGT
-        schema: PUBLIC
-      "9":
-        database: SRC_EXTERNAL
-        id: 9
-        locationName: EXTERNAL_SOURCE
-        schema: PUBLIC
-    name: DEV
-  PROD:
-    createdAt:
-      nanoseconds: 415000000
-      seconds: 1661410308
-    createdBy: 9EflPUFuQlXv5E6J0RNGW01scsY2
-    description: Production Environment
-    devEnv: false
-    id: 3
-    mappings:
-      "1":
-        database: SNOWFLAKE_SAMPLE_DATA
-        id: 1
-        locationName: SRC
-        schema: TPCH_SF1
-      "5":
-        database: COALASCE_DB_STAGE_DEV
-        id: 5
-        locationName: STAGE
-        schema: PUBLIC
-      "6":
-        database: COALASCE_DB_DEV
-        id: 6
-        locationName: TGT
-        schema: PUBLIC
-      "9":
-        database: SRC_EXTERNAL
-        id: 9
-        locationName: EXTERNAL_SOURCE
-        schema: PUBLIC
-    name: PROD
-jobs: {}
+defaultStorageMapping: SRC
+jobs:
+  Job-4:
+    id: 4
+    name: New Job
+    steps: []
+    subgraphs: []
 locations:
   EXTERNAL_SOURCE:
-    default: false
-    id: 9
-    locationName: EXTERNAL_SOURCE
+    mappingDefinitions:
+      "3":
+        database: SRC_EXTERNAL
+        schema: PUBLIC
   SRC:
-    default: true
-    id: 1
-    locationName: SRC
+    mappingDefinitions:
+      "3":
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF1
   STAGE:
-    default: false
-    id: 5
-    locationName: STAGE
+    mappingDefinitions:
+      "3":
+        database: COALASCE_DB_STAGE_DEV
+        schema: PUBLIC
   TGT:
-    default: false
-    id: 6
-    locationName: TGT
+    mappingDefinitions:
+      "3":
+        database: COALASCE_DB_DEV
+        schema: PUBLIC
 macros:
   Macro-1:
     id: "1"
@@ -95,6 +44,7 @@ stepTypes:
     id: Dimension
     isDisabled: false
     metadata:
+      defaultStorageLocation: null
       error: null
       nodeMetadataSpec: |-
         capitalized: Dimension
@@ -541,6 +491,7 @@ stepTypes:
     id: Fact
     isDisabled: false
     metadata:
+      defaultStorageLocation: null
       error: null
       nodeMetadataSpec: |
         capitalized: Fact
@@ -944,6 +895,7 @@ stepTypes:
     id: Hub
     isDisabled: false
     metadata:
+      defaultStorageLocation: null
       error: null
       nodeMetadataSpec: |-
         capitalized: Hub
@@ -1189,6 +1141,7 @@ stepTypes:
     id: Link
     isDisabled: false
     metadata:
+      defaultStorageLocation: null
       error: null
       nodeMetadataSpec: |-
         capitalized: Link
@@ -1433,6 +1386,7 @@ stepTypes:
     id: Satellite
     isDisabled: false
     metadata:
+      defaultStorageLocation: null
       error: null
       nodeMetadataSpec: |-
         capitalized: Satellite
@@ -1679,6 +1633,7 @@ stepTypes:
     id: Source
     isDisabled: false
     metadata:
+      defaultStorageLocation: null
       error: null
       nodeMetadataSpec: |-
         capitalized: Source
@@ -1700,6 +1655,7 @@ stepTypes:
     id: Stage
     isDisabled: false
     metadata:
+      defaultStorageLocation: null
       error: null
       nodeMetadataSpec: |
         capitalized: Stage
@@ -1904,6 +1860,7 @@ stepTypes:
     id: View
     isDisabled: false
     metadata:
+      defaultStorageLocation: null
       error: null
       nodeMetadataSpec: |
         capitalized: View
@@ -1983,6 +1940,7 @@ stepTypes:
     id: persistentStage
     isDisabled: false
     metadata:
+      defaultStorageLocation: null
       error: null
       nodeMetadataSpec: |
         capitalized: Persistent Stage
@@ -2447,4 +2405,27 @@ stepTypes:
             {% endif %}
     name: Persistent Stage
     version: 1
-subgraphs: {}
+subgraphs:
+  Subgraph-7:
+    id: 7
+    name: Orders
+    steps:
+      - "63"
+  Subgraph-8:
+    id: 8
+    name: Dimensions
+    steps:
+      - "62"
+  Subgraph-9:
+    id: 9
+    name: Stages
+    steps:
+      - "54"
+      - "55"
+      - "56"
+      - "58"
+      - "59"
+      - "60"
+      - "61"
+      - "69"
+version: 1
