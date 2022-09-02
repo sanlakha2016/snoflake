@@ -6,26 +6,12 @@ jobs:
     steps: []
     subgraphs: []
 locations:
-  EXTERNAL_SOURCE:
-    mappingDefinitions:
-      "3":
-        database: SRC_EXTERNAL
-        schema: PUBLIC
+  EDW:
+    mappingDefinitions: {}
   SRC:
-    mappingDefinitions:
-      "3":
-        database: SNOWFLAKE_SAMPLE_DATA
-        schema: TPCH_SF1
+    mappingDefinitions: {}
   STAGE:
-    mappingDefinitions:
-      "3":
-        database: COALASCE_DB_STAGE_DEV
-        schema: PUBLIC
-  TGT:
-    mappingDefinitions:
-      "3":
-        database: COALASCE_DB_DEV
-        schema: PUBLIC
+    mappingDefinitions: {}
 macros:
   Macro-1:
     id: "1"
