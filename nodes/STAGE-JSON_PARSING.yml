@@ -1,0 +1,32 @@
+steps:
+  JSON_PARSING-92:
+    operation:
+      database: ""
+      dataset: ""
+      locationID: ""
+      locationName: STAGE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 940
+              stepCounter: 92
+            config: {}
+            dataType: VARIANT
+            defaultValue: ""
+            description: ""
+            name: JSON_DATA
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('STAGE', 'JSON_PARSING') }}
+      name: JSON_PARSING
+      schema: ""
+      sqlType: Source
+      table: JSON_PARSING
+      type: sourceInput
+    stepCounter: "92"

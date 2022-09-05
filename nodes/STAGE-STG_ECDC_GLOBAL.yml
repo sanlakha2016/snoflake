@@ -1,0 +1,192 @@
+steps:
+  STG_ECDC_GLOBAL-87:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 862
+              stepCounter: "87"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 741
+                    stepCounter: "78"
+                transform: ""
+          - columnReference:
+              columnCounter: 863
+              stepCounter: "87"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CONTINENTEXP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 742
+                    stepCounter: "78"
+                transform: ""
+          - columnReference:
+              columnCounter: 864
+              stepCounter: "87"
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 743
+                    stepCounter: "78"
+                transform: ""
+          - columnReference:
+              columnCounter: 865
+              stepCounter: "87"
+            dataType: FLOAT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CASES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 744
+                    stepCounter: "78"
+                transform: ""
+          - columnReference:
+              columnCounter: 866
+              stepCounter: "87"
+            dataType: FLOAT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DEATHS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 745
+                    stepCounter: "78"
+                transform: ""
+          - columnReference:
+              columnCounter: 867
+              stepCounter: "87"
+            dataType: FLOAT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CASES_SINCE_PREV_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 746
+                    stepCounter: "78"
+                transform: ""
+          - columnReference:
+              columnCounter: 868
+              stepCounter: "87"
+            dataType: FLOAT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DEATHS_SINCE_PREV_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 747
+                    stepCounter: "78"
+                transform: ""
+          - columnReference:
+              columnCounter: 869
+              stepCounter: "87"
+            dataType: FLOAT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: POPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 748
+                    stepCounter: "78"
+                transform: ""
+          - columnReference:
+              columnCounter: 870
+              stepCounter: "87"
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 749
+                    stepCounter: "78"
+                transform: ""
+          - columnReference:
+              columnCounter: 871
+              stepCounter: "87"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 750
+                    stepCounter: "78"
+                transform: ""
+          - columnReference:
+              columnCounter: 872
+              stepCounter: "87"
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 751
+                    stepCounter: "78"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: ECDC_GLOBAL
+            join:
+              joinCondition: FROM {{ ref('SRC', 'ECDC_GLOBAL') }} "ECDC_GLOBAL"
+            name: STG_ECDC_GLOBAL
+            noLinkRefs: []
+      name: STG_ECDC_GLOBAL
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "87"

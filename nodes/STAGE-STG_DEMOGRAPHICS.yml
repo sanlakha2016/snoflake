@@ -1,0 +1,178 @@
+steps:
+  STG_DEMOGRAPHICS-86:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 852
+              stepCounter: "86"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 731
+                    stepCounter: "77"
+                transform: ""
+          - columnReference:
+              columnCounter: 853
+              stepCounter: "86"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 732
+                    stepCounter: "77"
+                transform: ""
+          - columnReference:
+              columnCounter: 854
+              stepCounter: "86"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FIPS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 733
+                    stepCounter: "77"
+                transform: ""
+          - columnReference:
+              columnCounter: 855
+              stepCounter: "86"
+            dataType: FLOAT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LATITUDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 734
+                    stepCounter: "77"
+                transform: ""
+          - columnReference:
+              columnCounter: 856
+              stepCounter: "86"
+            dataType: FLOAT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LONGITUDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 735
+                    stepCounter: "77"
+                transform: ""
+          - columnReference:
+              columnCounter: 857
+              stepCounter: "86"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 736
+                    stepCounter: "77"
+                transform: ""
+          - columnReference:
+              columnCounter: 858
+              stepCounter: "86"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 737
+                    stepCounter: "77"
+                transform: ""
+          - columnReference:
+              columnCounter: 859
+              stepCounter: "86"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_POPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 738
+                    stepCounter: "77"
+                transform: ""
+          - columnReference:
+              columnCounter: 860
+              stepCounter: "86"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_MALE_POPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 739
+                    stepCounter: "77"
+                transform: ""
+          - columnReference:
+              columnCounter: 861
+              stepCounter: "86"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_FEMALE_POPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 740
+                    stepCounter: "77"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: DEMOGRAPHICS
+            join:
+              joinCondition: FROM {{ ref('SRC', 'DEMOGRAPHICS') }} "DEMOGRAPHICS"
+            name: STG_DEMOGRAPHICS
+            noLinkRefs: []
+      name: STG_DEMOGRAPHICS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "86"

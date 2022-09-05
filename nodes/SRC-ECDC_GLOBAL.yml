@@ -1,0 +1,182 @@
+steps:
+  ECDC_GLOBAL-78:
+    operation:
+      database: ""
+      dataset: ""
+      locationID: ""
+      locationName: SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 741
+              stepCounter: 78
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY_REGION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 742
+              stepCounter: 78
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: CONTINENTEXP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 743
+              stepCounter: 78
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: ISO3166_1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 744
+              stepCounter: 78
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CASES
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 745
+              stepCounter: 78
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: DEATHS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 746
+              stepCounter: 78
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CASES_SINCE_PREV_DAY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 747
+              stepCounter: 78
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: DEATHS_SINCE_PREV_DAY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 748
+              stepCounter: 78
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: POPULATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 749
+              stepCounter: 78
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 750
+              stepCounter: 78
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_UPDATE_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 751
+              stepCounter: 78
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SRC', 'ECDC_GLOBAL') }}
+      name: ECDC_GLOBAL
+      schema: ""
+      sqlType: Source
+      table: ECDC_GLOBAL
+      type: sourceInput
+    stepCounter: "78"

@@ -1,0 +1,122 @@
+steps:
+  STG_CDC_TESTING-84:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 815
+              stepCounter: "84"
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 694
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 816
+              stepCounter: "84"
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 695
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 817
+              stepCounter: "84"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 696
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 818
+              stepCounter: "84"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: POSITIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 697
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 819
+              stepCounter: "84"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: NEGATIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 698
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 820
+              stepCounter: "84"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INCONCLUSIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 699
+                    stepCounter: "75"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: CDC_TESTING
+            join:
+              joinCondition: FROM {{ ref('SRC', 'CDC_TESTING') }} "CDC_TESTING"
+            name: STG_CDC_TESTING
+            noLinkRefs: []
+      name: STG_CDC_TESTING
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "84"

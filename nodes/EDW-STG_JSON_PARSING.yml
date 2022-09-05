@@ -1,0 +1,194 @@
+steps:
+  STG_JSON_PARSING-95:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: EDW
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 968
+              stepCounter: "95"
+            config: {}
+            dataType: STRING
+            description: ""
+            name: address_city
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 940
+                    stepCounter: "92"
+                transform: '"JSON_DATA":"address"."city"::STRING'
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 969
+              stepCounter: "95"
+            config: {}
+            dataType: STRING
+            description: ""
+            name: address_state
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 940
+                    stepCounter: "92"
+                transform: '"JSON_DATA":"address"."state"::STRING'
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 970
+              stepCounter: "95"
+            config: {}
+            dataType: STRING
+            description: ""
+            name: address_streetAddress
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 940
+                    stepCounter: "92"
+                transform: '"JSON_DATA":"address"."streetAddress"::STRING'
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 971
+              stepCounter: "95"
+            config: {}
+            dataType: NUMBER
+            description: ""
+            name: age
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 940
+                    stepCounter: "92"
+                transform: '"JSON_DATA":"age"::NUMBER'
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 972
+              stepCounter: "95"
+            config: {}
+            dataType: STRING
+            description: ""
+            name: firstName
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 940
+                    stepCounter: "92"
+                transform: '"JSON_DATA":"firstName"::STRING'
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 973
+              stepCounter: "95"
+            config: {}
+            dataType: STRING
+            description: ""
+            name: gender
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 940
+                    stepCounter: "92"
+                transform: '"JSON_DATA":"gender"::STRING'
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 974
+              stepCounter: "95"
+            config: {}
+            dataType: STRING
+            description: ""
+            name: lastName
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 940
+                    stepCounter: "92"
+                transform: '"JSON_DATA":"lastName"::STRING'
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 975
+              stepCounter: "95"
+            config: {}
+            dataType: STRING
+            description: ""
+            name: phoneNumbers_number
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 940
+                    stepCounter: "92"
+                transform: '"JSON_DATA_phoneNumbers".value::STRING'
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 976
+              stepCounter: "95"
+            config: {}
+            dataType: STRING
+            description: ""
+            name: phoneNumbers_type
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 940
+                    stepCounter: "92"
+                transform: '"JSON_DATA_phoneNumbers".value::STRING'
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: JSON_PARSING
+            join:
+              joinCondition: >-
+                FROM {{ ref('STAGE', 'JSON_PARSING') }} "JSON_PARSING", 
+
+                table(flatten("JSON_DATA":"phoneNumbers")) "JSON_DATA_phoneNumbers"
+            name: STG_JSON_PARSING
+            noLinkRefs: []
+      name: STG_JSON_PARSING
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "95"

@@ -1,0 +1,235 @@
+steps:
+  STG_CDC_INPATIENT_BEDS_COVID_19-82:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 787
+              stepCounter: "82"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 666
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 788
+              stepCounter: "82"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 667
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 789
+              stepCounter: "82"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INPATIENT_BEDS_OCCUPIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 668
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 790
+              stepCounter: "82"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INPATIENT_BEDS_LOWER_BOUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 669
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 791
+              stepCounter: "82"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INPATIENT_BEDS_UPPER_BOUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 670
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 792
+              stepCounter: "82"
+            dataType: FLOAT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INPATIENT_BEDS_IN_USE_PCT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 671
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 793
+              stepCounter: "82"
+            dataType: FLOAT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INPATIENT_BEDS_IN_USE_PCT_LOWER_BOUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 672
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 794
+              stepCounter: "82"
+            dataType: FLOAT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INPATIENT_BEDS_IN_USE_PCT_UPPER_BOUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 673
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 795
+              stepCounter: "82"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_INPATIENT_BEDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 674
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 796
+              stepCounter: "82"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_INPATIENT_BEDS_LOWER_BOUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 675
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 797
+              stepCounter: "82"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_INPATIENT_BEDS_UPPER_BOUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 676
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 798
+              stepCounter: "82"
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 677
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 799
+              stepCounter: "82"
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 678
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 800
+              stepCounter: "82"
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 679
+                    stepCounter: "73"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: CDC_INPATIENT_BEDS_COVID_19
+            join:
+              joinCondition: FROM {{ ref('SRC', 'CDC_INPATIENT_BEDS_COVID_19') }}
+                "CDC_INPATIENT_BEDS_COVID_19"
+            name: STG_CDC_INPATIENT_BEDS_COVID_19
+            noLinkRefs: []
+      name: STG_CDC_INPATIENT_BEDS_COVID_19
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "82"

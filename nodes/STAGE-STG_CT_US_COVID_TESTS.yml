@@ -1,0 +1,472 @@
+steps:
+  STG_CT_US_COVID_TESTS-85:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 821
+              stepCounter: "85"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 700
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 822
+              stepCounter: "85"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 701
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 823
+              stepCounter: "85"
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 702
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 824
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: POSITIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 703
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 825
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: POSITIVE_SINCE_PREVIOUS_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 704
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 826
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: NEGATIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 705
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 827
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: NEGATIVE_SINCE_PREVIOUS_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 706
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 828
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PENDING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 707
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 829
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PENDING_SINCE_PREVIOUS_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 708
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 830
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DEATH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 709
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 831
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DEATH_SINCE_PREVIOUS_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 710
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 832
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HOSPITALIZED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 711
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 833
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HOSPITALIZED_SINCE_PREVIOUS_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 712
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 834
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 713
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 835
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_SINCE_PREVIOUS_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 714
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 836
+              stepCounter: "85"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 715
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 837
+              stepCounter: "85"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 716
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 838
+              stepCounter: "85"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 717
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 839
+              stepCounter: "85"
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 718
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 840
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HOSPITALIZEDCURRENTLY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 719
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 841
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HOSPITALIZEDCURRENTLYINCREASE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 720
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 842
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HOSPITALIZEDCUMULATIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 721
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 843
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HOSPITALIZEDCUMULATIVEINCREASE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 722
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 844
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INICUCURRENTLY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 723
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 845
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INICUCURRENTLYINCREASE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 724
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 846
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INICUCUMULATIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 725
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 847
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INICUCUMULATIVEINCREASE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 726
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 848
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ONVENTILATORCURRENTLY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 727
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 849
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ONVENTILATORCURRENTLYINCREASE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 728
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 850
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ONVENTILATORCUMULATIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 729
+                    stepCounter: "76"
+                transform: ""
+          - columnReference:
+              columnCounter: 851
+              stepCounter: "85"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ONVENTILATORCUMULATIVEINCREASE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 730
+                    stepCounter: "76"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: CT_US_COVID_TESTS
+            join:
+              joinCondition: FROM {{ ref('SRC', 'CT_US_COVID_TESTS') }} "CT_US_COVID_TESTS"
+            name: STG_CT_US_COVID_TESTS
+            noLinkRefs: []
+      name: STG_CT_US_COVID_TESTS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "85"

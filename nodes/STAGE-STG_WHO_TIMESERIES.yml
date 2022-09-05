@@ -1,0 +1,178 @@
+steps:
+  STG_WHO_TIMESERIES-89:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 884
+              stepCounter: "89"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 763
+                    stepCounter: "80"
+                transform: ""
+          - columnReference:
+              columnCounter: 885
+              stepCounter: "89"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CASES_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 764
+                    stepCounter: "80"
+                transform: ""
+          - columnReference:
+              columnCounter: 886
+              stepCounter: "89"
+            dataType: FLOAT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CASES_TOTAL_PER_100000
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 765
+                    stepCounter: "80"
+                transform: ""
+          - columnReference:
+              columnCounter: 887
+              stepCounter: "89"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CASES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 766
+                    stepCounter: "80"
+                transform: ""
+          - columnReference:
+              columnCounter: 888
+              stepCounter: "89"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DEATHS_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 767
+                    stepCounter: "80"
+                transform: ""
+          - columnReference:
+              columnCounter: 889
+              stepCounter: "89"
+            dataType: FLOAT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DEATHS_TOTAL_PER_100000
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 768
+                    stepCounter: "80"
+                transform: ""
+          - columnReference:
+              columnCounter: 890
+              stepCounter: "89"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DEATHS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 769
+                    stepCounter: "80"
+                transform: ""
+          - columnReference:
+              columnCounter: 891
+              stepCounter: "89"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TRANSMISSION_CLASSIFICATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 770
+                    stepCounter: "80"
+                transform: ""
+          - columnReference:
+              columnCounter: 892
+              stepCounter: "89"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 771
+                    stepCounter: "80"
+                transform: ""
+          - columnReference:
+              columnCounter: 893
+              stepCounter: "89"
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 772
+                    stepCounter: "80"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: WHO_TIMESERIES
+            join:
+              joinCondition: FROM {{ ref('SRC', 'WHO_TIMESERIES') }} "WHO_TIMESERIES"
+            name: STG_WHO_TIMESERIES
+            noLinkRefs: []
+      name: STG_WHO_TIMESERIES
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "89"
